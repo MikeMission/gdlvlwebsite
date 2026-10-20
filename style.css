@@ -1,0 +1,219 @@
+body{
+    margin: 0px;
+    min-height: 100vh;
+    /* background: url("images/imgreentodayPrev.png") no-repeat center center fixed; */
+    background: linear-gradient(#3a6fd8, #1f3f8f);
+    /* background-color: #00BFFF; */
+    background-size: cover;
+}
+
+@font-face{
+    font-family: "Pusab";
+    src: url("fonts/Pusab/Pusab.woff2") format("woff2");
+    font-display: swap;
+}
+
+h1,h2,h3, .title{
+    font-family: "Pusab", sans-serif;
+    color: #FFFFFF;
+    -webkit-text-stroke: 6px black;
+    paint-order: stroke fill;
+    letter-spacing: 1px;
+}
+
+h1{
+    text-align: center;
+    white-space:nowrap;
+    font-size: clamp(1.2rem, 5vw, 3rem);
+}
+h2{
+    text-align: center;
+    white-space:nowrap;
+    font-size: clamp(1.1rem, 4vw, 2rem);
+}
+h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: clamp(1.2rem, 5vw, 3rem);
+}
+
+a,p {
+    font-family: "Pusab", sans-serif;
+    white-space:pre-line;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+img {
+    width: 25vw;
+    max-width: 600px;
+    height:auto;
+}
+
+
+
+.imgTitle {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.favPartImg1 , .favPartImg2, .favPartImg3{
+    width: 25vw;
+    max-width: 600px;
+    height:auto;
+}
+
+.randomWaveTrailImg {
+    width: 50vw;
+    max-width: 600px;
+    height:auto;
+    margin-left: 0;
+}
+
+.box {
+  background: linear-gradient(#3a6fd8, #1f3f8f);
+  border: 4px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  width: auto;
+  max-width: 800px;
+  text-align:center;
+}
+
+button.box {
+  font: inherit;       /* buttons ignore your font by default */
+  cursor: pointer;
+  width: 100%;         /* optional: buttons shrink to fit their content otherwise */
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+}
+
+button.box:hover {
+    filter: brightness(1.15);
+}
+
+
+.largeBox{
+  background: linear-gradient(#3a6fd8, #1f3f8f);
+  border: 4px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  width: auto;
+  max-width: 1200px;
+  text-align:center;
+}
+
+.ratingRow{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    max-height: auto;
+}
+
+.estDifRow{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.ratingBox {
+  background: linear-gradient(#3a6fd8, #1f3f8f);
+  border: 4px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  width: auto;
+  max-width: 200px;
+  text-align:center;
+  flex: 1;
+  gap: 1.5rem;                           /* space between boxes */
+}
+
+.estimatedDiffBox{
+  background: linear-gradient(#3a6fd8, #1f3f8f);
+  border: 4px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  width: auto;
+  max-width: 50rw;
+  text-align:center;
+  margin: 0;
+  flex: 0 0 50rw;
+  gap: 1.5rem;                           /* space between boxes */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1.5rem;                           /* space between boxes */
+  max-width: 1000px;
+  margin: 0 auto;                        /* centers the whole grid */
+  padding: 1rem;
+}
+
+.largeGrid {
+  display: grid;
+  gap: 1.5rem;                           /* space between boxes */
+  max-width: 1200px;
+  margin: 0 auto;                        /* centers the whole grid */
+  padding: 1rem;
+}
+
+.innerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1.5rem;                           /* space between boxes */
+  max-width: 1200px;
+  margin: 0 auto;                        /* centers the whole grid */
+  padding: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  min-height: 50vh;       /* gives the parent height to center within */
+  width: auto;
+  max-width: 100px;
+}
+
+.arrow{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: clamp(1.2rem, 5vw, 3rem);
+    color: #FFFFFF;
+    -webkit-text-stroke: 6px black;
+    paint-order: stroke fill;
+}
+
+.rating{
+    width: 60px;
+    max-width: 10rem;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.estimatedDifficulty{
+    width: 5rem;
+    max-width: 10rem;
+    min-height: 10vh;
+}
+
+.estRatingHeader {
+    text-align: left;
+    margin: 0 0 0 1rem;
+}
+
+.estDifRow p{
+    margin: 0;
+}
+
+
