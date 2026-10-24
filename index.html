@@ -17,16 +17,15 @@
 
 
   <main>
-
     <div class="grid">
       <div class="box">
-        <h3 class="imgTitle">imgreentoday:</h3> 
-        <img src="images/imgreentodayPrev.png">
+        <h3 class="imgTitle" id="levelName">imgreentoday</h3> 
+        <img src="images/imgreentodayPrev.png" id="levelPrevImg">
       </div>
 
       <div class="box">
         <h3 class="imgTitle">description:</h3>
-        <p>A level that I made by just typing random numbers in the song id where I found this song, and proceded to make a level out of it!</p>
+        <p id="levelDescription">A level that I made by just typing random numbers in the song id where I found this song, and proceded to make a level out of it!</p>
       </div>
       
       <button class="box" id ="nextLevelButton">
@@ -39,14 +38,14 @@
       <div class="ratingBox">
           <h3>Rating:</h3>
           <img class ="rating" src="images/unrated.png">
-          <p>unrated</p>
+          <p id="actualRatingLabel">unrated</p>
       </div>
 
       <div class="estimatedDiffBox">
           <h3>Estimated Difficulty:</h3>
           <div class="estDifRow">
             <img class="estimatedDifficulty" src="images/harder.png">
-            <p>I think It's harder because waves are a little hard</p>
+            <p id="estimatedDifficultyDescription">I think It's harder because waves are a little hard</p>
           </div>
           <p class="estRatingHeader">harder</p>
       </div>
@@ -56,15 +55,15 @@
       <div class="largeBox">
         <h3>Favourite Parts:</h3>
           <div class="innerGrid">
-            <h3>31%</h3>
-            <h3>66%</h3>
-            <h3>76%</h3>
+            <h3 id="favPart1Percentage">31%</h3>
+            <h3 id="favPart2Percentage">66%</h3>
+            <h3 id="favPart3Percentage">76%</h3>
             <img class="favPartImg1" src="images/imgreentoday31.png">
             <img class="favPartImg2" src="images/imgreentoday66.png">
             <img class="favPartImg3" src="images/imgreentoday76.png">
-            <p>The ball of very easy and enjoyable gameplay</p>
-            <p>The wave of relatively easy spam</p>
-            <p>I wonder why he likes this part... &lbrack;SLH reference&rbrack;</p>
+            <p id="favPart1Desc">The ball of very easy and enjoyable gameplay</p>
+            <p id="favPart2Desc">The wave of relatively easy spam</p>
+            <p id="favPart3Desc">I wonder why he likes this part... &lbrack;SLH reference&rbrack;</p>
           </div>
       </div>
     </div>
