@@ -173,6 +173,26 @@ function showLevel(i) {
 document.getElementById("nextLevelButton").addEventListener("click", () => {
   currentLevel = (currentLevel + 1) % levelDetails.length;
   showLevel(currentLevel);
-
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const completionsButton = document.getElementById('vqncompletionspagebutton');
+    const youtubeButton = document.getElementById('youtubeButton');
+    const gitHubButton = document.getElementById('gitHubButton');
+
+    if (completionsButton) {
+      completionsButton.addEventListener('click', () => {
+          window.location.href = 'completions.html';
+      });
+    }
+    if (youtubeButton) {
+      youtubeButton.addEventListener('click', () => {
+        window.open('https://www.youtube.com/@vqn7395', '_blank');
+      });
+    }
+    if (gitHubButton) {
+      gitHubButton.addEventListener('click', () => {
+        window.open('https://github.com/MikeMission', '_blank');
+      });
+    }
+});
