@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Pusab';
+    src: url('Pusab.woff2') format('woff2'),
+        url('Pusab.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
