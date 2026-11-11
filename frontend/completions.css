@@ -2,7 +2,7 @@ body{
     margin: 0rem;
     min-height: 100vh;
     /* background: url("images/imgreentodayPrev.png") no-repeat center center fixed; */
-    background: linear-gradient(#35c557, #378f1f);
+    background: linear-gradient(#3a6fd8, #1f3f8f);
     transition: #000000 0.5s;
     /* background-color: #00BFFF; */
     background-size: cover;
@@ -50,13 +50,6 @@ img {
     height:auto;
 }
 
-
-
-.imgTitle {
-  text-align: center;
-  margin-top: 1rem;
-}
-
 .favPartImg1 , .favPartImg2, .favPartImg3{
     width: 25vw;
     max-width: 37.5rem;
@@ -71,7 +64,7 @@ img {
 }
 
 .box {
-  background: linear-gradient(#35c557, #378f1f);
+  background: linear-gradient(#3a6fd8, #1f3f8f);
   border: 0.25rem solid black;
   border-radius: 0.625rem;
   padding: 1rem;
@@ -98,6 +91,26 @@ button.box:hover {
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   gap: 1.5rem;                           /* space between boxes */
   max-width: 62.5rem;
+  margin: 0 auto;                        /* centers the whole grid */
+  padding: 1rem;
+}
+
+.largeBox{
+  background: linear-gradient(#3a6fd8, #1f3f8f);
+  border: 0.25rem solid black;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  color: white;
+  width: auto;
+  max-width: 95rem;
+  text-align:center;
+  margin: 0 auto;
+}
+
+.largeGrid {
+  display: grid;
+  gap: 1.5rem;                           /* space between boxes */
+  max-width: 95rem;
   margin: 0 auto;                        /* centers the whole grid */
   padding: 1rem;
 }
