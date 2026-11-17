@@ -42,6 +42,7 @@ a,p {
     font-family: "Pusab", sans-serif;
     white-space:pre-line;
     font-size: clamp(1rem, 4vw, 1.5rem);
+    -webkit-text-stroke: 0.050rem black;
 }
 
 img {

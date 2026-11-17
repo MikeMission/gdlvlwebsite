@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const vqnlevelsbutton = document.getElementById('vqnlevelsbutton');
     const youtubeButton = document.getElementById('youtubeButton');
@@ -21,11 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// completions.js
 
+// completions.js
 async function renderAredlLevels() {
     try {
-        // Fetch from your local Django proxy (which reads from your database safely)
         const response = await fetch('http://127.0.0.1:8000/api/aredl-proxy/');
         
         if (!response.ok) {
@@ -33,7 +31,7 @@ async function renderAredlLevels() {
         }
 
         const levels = await response.json();
-        console.log("Successfully fetched levels from Django proxy:", levels);
+        console.log("Fetched levels from local database:", levels);
         
         const listElement = document.getElementById('level-list');
         if (!listElement) {
@@ -41,23 +39,47 @@ async function renderAredlLevels() {
             return;
         }
         
-        listElement.innerHTML = ''; // Clear loading text
+        listElement.innerHTML = '';
         
         if (!Array.isArray(levels) || levels.length === 0) {
-            listElement.innerHTML = '<li>No levels in the database yet. Add some via Django Admin!</li>';
+            listElement.innerHTML = '<li>No levels in the database yet.</li>';
             return;
         }
         
-        // Render each level into your HTML page
         levels.forEach(level => {
             const listItem = document.createElement('li');
-            listItem.textContent = `#${level.aredlPosition} - ${level.name} (Creator: ${level.creator})`;
+            
+            // Create a button for each level
+            const button = document.createElement('button');
+            button.textContent = `${level.name} - AREDL #${level.aredlPosition}`;
+            button.className = 'level-btn'; // Optional: use for CSS styling
+            
+            // Update the details box when this specific button is clicked
+            button.addEventListener('click', () => {
+                showLevelDetails(level);
+            });
+            
+            listItem.appendChild(button);
             listElement.appendChild(listItem);
         });
         
     } catch (error) {
         console.error("Failed to load levels:", error);
     }
+}
+
+function showLevelDetails(level) {
+    const detailsBox = document.getElementById('level-details');
+    if (!detailsBox) return;
+
+    detailsBox.innerHTML = `
+        <h2>#${level.personalPosition} - ${level.name}</h2>
+        <p><strong>AREDL Position:</strong> #${level.aredlPosition}</p>
+        <p><strong>Creator:</strong> ${level.creator}</p>
+        <p><strong>Completion Date:</strong> ${level.completionDate || 'N/A'}</p>
+        <p><strong>Enjoyment:</strong> ${level.enjoyment !== null ? level.enjoyment + '/10' : 'N/A'}</p>
+        <p><strong>Attempts:</strong> ${level.attemptCount}</p>
+    `;
 }
 
 document.addEventListener('DOMContentLoaded', renderAredlLevels);

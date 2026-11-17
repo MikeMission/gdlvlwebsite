@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vqn's Geometry Dash Levels</title>
+  <link rel="stylesheet" href="{% static 'api/completions.css' %}">
+  <link rel="icon" type="image/png" href="{% static 'api/images/icon.png' %}">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Vqn's Completions!</h1>
+      <h2>This is a website for geometry dash levels that I've Completed!</h2>
+    </div>
+  </header>
+
+  <main>
+    <!-- not gonna look for image, just texts. -->
+     
+    <div class="levelListGrid">
+      <div class = "BoxOuter" id = "aredl-container">
+        <div class = "BoxInner">
+          <h1>Levels:</h1>
+          <ol id="level-list" class="">Loading...</ol>
+        </div>
+      </div>
+
+      <div class = "levelOuter">
+        <div class = "BoxInner">
+          <h1 id = "levelTitle">Torsion</h1>
+
+          <div class = "videoWrapper">
+            <iframe id="levelVideo"
+              src="https://www.youtube.com/embed/cgh5lbU_zok"
+              height="315" width="560"
+              title="Level video"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          
+
+          <!-- <video" src = "images/placeholder.png"> -->
+          <div class = "BoxInner">
+            <div class = "grid">
+              <h2>Description:</h2>
+              <h2>Creator:</h2>
+              <h2>Attempts:</h2>
+
+              <p id = "levelDescription">I love</p>
+              
+              <p id = "levelCreator">Creator</p>
+              
+              <p id = "attempts">Attempts</p>
+
+              <h2>Enjoyment:</h2>
+              <h2>Completion:</h2>
+              <br></br>
+              <p id = "enjoyment">Enjoyment</p>
+              <p id = "completion">Completion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class = "grid">
+      <button class="box" id ="vqnlevelsbutton">
+        <h3>Vqn's Levels!</h3>
+      </button>
+      <button class= "box" id="youtubeButton">
+        <h3>My Youtube</h3>
+      </button>
+      <button class="box" id = "gitHubButton">
+        <h3>My Github!</h3>
+      </button>
+    </div>
+
+  </main>
+
+  <footer>
+    <img class= "randomWaveTrailImg" src="{% static 'api/images/waveTrailRandom.png' %}">
+    <div class="footer"></div>
+      <p>2026 Vqn's Geometry Dash Completions</p>
+    </div>
+  </footer>
+
+  <script src="{% static 'api/completions.js' %}"></script>
+</body>
+</html>
