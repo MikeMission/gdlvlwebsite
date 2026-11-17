@@ -20,6 +20,8 @@ from api import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index, name="index"),
+    path("", views.index),                       # http://127.0.0.1:8000/
+    path("index/", views.index, name="index"),   # http://127.0.0.1:8000/index/
+    path("completions/", views.completions, name="completions"),  # http://127.0.0.1:8000/completions/
     path("api/", include("api.urls")),
 ]

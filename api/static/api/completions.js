@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (vqnlevelsbutton) {
       vqnlevelsbutton.addEventListener('click', () => {
-          window.location.href = 'index.html';
+          window.location.href = "/index/";
       });
     }
     if (youtubeButton) {
@@ -68,18 +68,33 @@ async function renderAredlLevels() {
     }
 }
 
-function showLevelDetails(level) {
-    const detailsBox = document.getElementById('level-details');
-    if (!detailsBox) return;
-
-    detailsBox.innerHTML = `
-        <h2>#${level.personalPosition} - ${level.name}</h2>
-        <p><strong>AREDL Position:</strong> #${level.aredlPosition}</p>
-        <p><strong>Creator:</strong> ${level.creator}</p>
-        <p><strong>Completion Date:</strong> ${level.completionDate || 'N/A'}</p>
-        <p><strong>Enjoyment:</strong> ${level.enjoyment !== null ? level.enjoyment + '/10' : 'N/A'}</p>
-        <p><strong>Attempts:</strong> ${level.attemptCount}</p>
-    `;
+function formatDate(value) {
+  if (!value) return "";                       // empty or null field
+  const [y, m, d] = value.split("T")[0].split("-").map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString("en-GB", {
+    day: "numeric", month: "long", year: "numeric"
+  });
 }
+
+function showLevelDetails(level) {
+    const levelTitle = document.getElementById("levelTitle")
+    const levelDescription = document.getElementById('levelDescription');
+    const levelCreator = document.getElementById('levelCreator');
+    const attempts = document.getElementById('attempts');
+    const enjoyment = document.getElementById('enjoyment');
+    const completion = document.getElementById('completion');
+    const levelVideo = document.getElementById('levelVideo');
+
+    levelTitle.textContent = level.name;
+    levelVideo.src = level.videoEmbed || '';
+    levelDescription.textContent = level.description || 'No description available.';
+    levelCreator.textContent = level.creator || 'Unknown';
+    attempts.textContent = level.attemptCount !== undefined ? level.attemptCount : 'N/A';
+    enjoyment.textContent = level.enjoyment !== undefined ? level.enjoyment : 'N/A';
+    completion.textContent = level.completionDate !== undefined ? level.completionDate : 'N/A';
+   
+}
+
+
 
 document.addEventListener('DOMContentLoaded', renderAredlLevels);

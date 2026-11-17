@@ -26,6 +26,7 @@ h1{
     text-align: center;
     white-space:nowrap;
     font-size: clamp(1.2rem, 5vw, 3rem);
+    margin-bottom: 0.25rem;
 }
 h2{
     text-align: center;
@@ -43,6 +44,7 @@ a,p,li,ul {
     white-space:pre-line;
     font-size: clamp(1rem, 4vw, 1.5rem);
     -webkit-text-stroke: 0.050rem black;
+
 }
 
 img {
@@ -131,6 +133,11 @@ button.box:hover {
   width: auto;
   text-align: center;
   margin: 0 auto;
+}
+
+.BoxInner a{
+  display:inline-block;
+  margin-top: 0rem;
 }
 
 .completionsLayout {

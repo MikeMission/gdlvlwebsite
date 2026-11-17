@@ -21,8 +21,7 @@
     <div class="grid">
       <div class="box">
         <h3 class="imgTitle" id="levelName">imgreentoday</h3> 
-        <img src="{% static 'api/images/imgreen
-        todayPrev.png' %}" id="levelPrevImg">
+        <img src="{% static 'api/images/imgreentodayPrev.png' %}" id="levelPrevImg">
       </div>
 
       <div class="box">
@@ -90,7 +89,8 @@
       <p>2026 Vqn's Geometry Dash Levels</p>
     </div>
   </footer>
-
+  
+  {{ levels|json_script:"level-data" }}
   <script src="{% static 'api/script.js' %}"></script>
 </body>
 </html>
